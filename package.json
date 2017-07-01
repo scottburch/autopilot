@@ -1,0 +1,39 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^7.0.0",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.28.0",
+    "electron": "^1.6.2",
+    "electron-rebuild": "^1.5.7",
+    "react-bootstrap": "^0.30.7",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.7"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "kalmanjs": "^1.0.0-beta",
+    "key-event-to-string": "^1.1.1",
+    "lodash": "^4.17.4",
+    "node-pid-controller": "^1.0.0",
+    "serialport": "^4.0.7"
+  }
+}
