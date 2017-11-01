@@ -6,11 +6,11 @@ module.exports = {
             rudderWait: 200,
             smoothing: 10,
             kP: 0.25,
-            kI: 0.03,
+            kI: 0.01,
             kD: 0.01,
 
             kfR: 1,
-            kfQ: 5,
+            kfQ: 3,
             rudderMult: 65
         }
     },
@@ -21,11 +21,11 @@ module.exports = {
             rudderWait: 200,
             smoothing: 10,
             kP: 0.6,
-            kI: 0.06,
-            kD: 0.01,
+            kI: 0.02,
+            kD: 0.02,
 
             kfR: 1,
-            kfQ: 5,
+            kfQ: 3,
             rudderMult: 65
         }
     },
@@ -36,11 +36,11 @@ module.exports = {
             rudderWait: 200,
             smoothing: 10,
             kP: 1,
-            kI: 0.07,
-            kD: 0.01,
+            kI: 0.04,
+            kD: 0.02,
 
             kfR: 1,
-            kfQ: 5,
+            kfQ: 3,
             rudderMult: 100
         }
     },

@@ -18,17 +18,18 @@ function start() {
 //    var dev = '/dev/cu.usbmodem1421'
 //    var dev = '/dev/ttyACM0';
 //    var dev = '/dev/ttyUSB0';
+
+    const parser = new SerialPort.parsers.Readline();
     port = new SerialPort(dev, {
-        baudrate: 115200,
-        parser: SerialPort.parsers.readline("\n")
+        baudRate: 115200,
     });
+	port.pipe(parser);
 
 
     port.on("open", function () {
         console.log('port open');
 
-        port.on('data', function (string) {
-
+        parser.on('data', function (string) {
             string = _.trim(string);
             if (/[A-Z0-9]+\:/.test(string)) {
                 var parts = string.split(':');
