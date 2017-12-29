@@ -17,7 +17,7 @@ values.set({
 
 
 values.onChangeValue('course', () => {
-    if(values.course === undefined) {
+    if (values.course === undefined) {
         pidController = undefined;
         values.set({rudder: 0});
     }
@@ -83,7 +83,7 @@ function calcCourseError() {
 
 values.onChangeValues(['kP', 'kI', 'kD'], () => {
     let pid = pidController;
-    if(pid) {
+    if (pid) {
         pid.k_p = values.kP;
         pid.k_i = values.kI;
         pid.k_d = values.kD;
@@ -104,22 +104,26 @@ function createPIDController() {
         k_d: values.kD
     });
     pidController.setTarget(0);
-    pidController.last = 0;
+//    pidController.last = 0;
 }
 
-function calcRudder() {
-    values.course === undefined ? noRudder() : handleError();
+const calcRudder = (function () {
+    let last = 0;
+    return () => {
+        values.course === undefined ? noRudder() : handleError();
 
-    function handleError() {
-        pidController || createPIDController();
-        let result = pidController.update(values.error);
-        let newRudder = utils.fixed((result - pidController.last) * values.rudderMult, 0);
-        values.set({rudder: newRudder < 0 ? Math.max(-1023, newRudder) : Math.min(1023, newRudder)});
-        pidController.last = result;
-    }
+        function handleError() {
+            pidController || createPIDController();
+            let result = pidController.update(values.error);
+            let newRudder = utils.fixed((result - last) * values.rudderMult, 0);
+            values.set({rudder: newRudder < 0 ? Math.max(-1023, newRudder) : Math.min(1023, newRudder)});
+            last = result;
+        }
 
-    function noRudder() {
-        values.set({rudder: 0});
+        function noRudder() {
+            last = 0;
+            values.set({rudder: 0});
+        }
     }
-}
+}());
 
