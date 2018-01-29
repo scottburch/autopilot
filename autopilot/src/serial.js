@@ -1,6 +1,7 @@
 var values = require('./values');
 var utils = require('./utils');
 var Smoother = require('./Smoother');
+const {data} = require('./data');
 
 var _ = require('lodash');
 
