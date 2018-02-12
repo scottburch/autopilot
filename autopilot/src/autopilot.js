@@ -1,11 +1,11 @@
 "use strict";
-var PID = require('node-pid-controller');
+const PID = require('node-pid-controller');
 const presets = require('./presets');
 
-var values = require('./values');
-var utils = require('./utils');
-var pidController;
-var kalmanFilter;
+const values = require('./values');
+const utils = require('./utils');
+let pidController;
+let kalmanFilter;
 
 const KalmanFilter = require('kalmanjs').default;
 
@@ -65,10 +65,10 @@ const calcYawSpeed = (function () {
     var lastCalcTime;
 
     return function () {
-        lastCalcTime = lastCalcTime || values.now();
-        values.set({yawSpeed: (values.error - lastError) * (1000 / (values.now() - lastCalcTime))});
+        lastCalcTime = lastCalcTime || utils.now();
+        values.set({yawSpeed: (values.error - lastError) * (1000 / (utils.now() - lastCalcTime))});
         lastError = values.error;
-        lastCalcTime = values.now();
+        lastCalcTime = utils.now();
     }
 }());
 

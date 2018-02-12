@@ -6,5 +6,8 @@ module.exports = {
         if (diff < -180) diff += 360;
         if (diff > 180) diff -= 360;
         return diff;
-    }
+    },
+
+    now: () => new Date().getTime(),
+
 };

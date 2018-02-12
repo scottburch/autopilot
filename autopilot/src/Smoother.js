@@ -8,7 +8,7 @@ module.exports = class {
 
     smooth(value) {
         this.smoothedSin !== undefined ? smoothThem.call(this, value) : init.call(this, value);
-        this.lastUpdate = values.now();
+        this.lastUpdate = utils.now();
         return this.radToDeg(Math.atan2(this.smoothedSin, this.smoothedCos));
 
         function init(value) {
@@ -25,7 +25,7 @@ module.exports = class {
         }
 
         function smoothIt(smoothed, value) {
-            var elapsedTime = values.now() - this.lastUpdate;
+            var elapsedTime = utils.now() - this.lastUpdate;
             var smoothing = this.smoothing / elapsedTime;
             smoothing < 1 && (smoothing = 1);
             smoothed += (value - smoothed) / smoothing;

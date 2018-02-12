@@ -29,18 +29,7 @@ var values = module.exports = {
         anyValueListeners = _.uniq(anyValueListeners.concat([cb]));
     },
 
-    offChangeAnyValue: cb => {
-        anyValueListeners = _.pull(anyValueListeners, cb);
-    },
-
     onChangeValues: (props, cb) => {
         _.each(props, prop => values.onChangeValue(prop, cb));
-    },
-
-    now: () => new Date().getTime(),
-
-    reset: () => {
-        listeners = {};
-        _.each(values, (value, prop) => _.isFunction(value) || delete values[prop]);
     }
 };

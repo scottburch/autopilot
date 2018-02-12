@@ -2,6 +2,8 @@ const electron = require('electron');
 
 const start = require('./autopilot/src/start');
 
+console.log('Node version:', process.version);
+
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
