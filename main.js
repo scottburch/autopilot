@@ -1,4 +1,6 @@
-const electron = require('electron');
+const electron  = require('electron');
+
+electron.powerSaveBlocker.start('prevent-display-sleep');
 
 const start = require('./autopilot/src/start');
 

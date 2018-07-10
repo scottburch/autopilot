@@ -36,10 +36,12 @@
     "kalmanjs": "^1.0.0-beta",
     "key-event-to-string": "^1.1.1",
     "lodash": "^4.17.4",
+    "mobx": "^5.0.3",
     "node-pid-controller": "^1.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "serialport": "^6.0.4",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-beep-plugin": "^1.0.0"
   }
 }

@@ -1,3 +1,4 @@
+var BeepPlugin = require('webpack-beep-plugin');
 const path = require('path');
 
 module.exports = {
@@ -34,5 +35,6 @@ module.exports = {
     },
     node: {
         fs: "empty"
-    }
+    },
+    plugins: [new BeepPlugin()]
 };
