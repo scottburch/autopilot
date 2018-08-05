@@ -5,9 +5,6 @@ const presets = require('./presets');
 const values = require('./values');
 const utils = require('./utils');
 let pidController;
-let kalmanFilter;
-
-const KalmanFilter = require('kalmanjs').default;
 
 values.set({
     heading: 180,
@@ -73,11 +70,9 @@ const calcYawSpeed = (function () {
 }());
 
 function calcCourseError() {
-    kalmanFilter = kalmanFilter || initKalmanFilter();
     var error = values.course === undefined ? undefined : utils.fixed(utils.getDirectionalDiff(values.course, values.heading));
     values.set({
-        rawError: error,
-        error: kalmanFilter.filter(error)
+        error: error
     });
 }
 
@@ -89,13 +84,6 @@ values.onChangeValues(['kP', 'kI', 'kD'], () => {
         pid.k_d = values.kD;
     }
 });
-
-values.onChangeValues(['kfR', 'kfQ'], initKalmanFilter);
-
-function initKalmanFilter() {
-    return kalmanFilter = new KalmanFilter({R: values.kfR, Q: values.kfQ});
-}
-
 
 function createPIDController() {
     pidController = new PID({

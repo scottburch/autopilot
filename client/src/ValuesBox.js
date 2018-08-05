@@ -15,9 +15,9 @@ module.exports = class ValuesBox extends React.Component {
         return (
             <div>
                 <ValueField label="Course">{values.course}</ValueField>
-                <ValueField label="Heading">{values.heading} (<Color>{values.heading - values.rawHeading}</Color>)</ValueField>
+                <ValueField label="Heading">{values.heading}</ValueField>
 
-                <ValueField label="Error"><Color>{values.error}</Color> (<Color>{values.error - values.rawError}</Color>)</ValueField>
+                <ValueField label="Error"><Color>{values.error}</Color></ValueField>
                 <ValueField label="Rudder"><Color>{values.course === undefined ? 'N/A' : values.rudder}</Color> </ValueField>
             </div>
         )

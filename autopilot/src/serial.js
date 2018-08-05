@@ -1,6 +1,5 @@
 var values = require('./values');
 var utils = require('./utils');
-var Smoother = require('./Smoother');
 const {data} = require('./data');
 
 var _ = require('lodash');
@@ -8,9 +7,6 @@ var _ = require('lodash');
 var port;
 var SerialPort = require('serialport');
 
-values.set({
-    smoothing: 100
-});
 
 values.simulator || start();
 
@@ -80,10 +76,6 @@ function start() {
     });
 
 
-    const headingSmoother = new Smoother(values.smoothing);
-    values.onChangeValue('smoothing', () => {
-        headingSmoother.smoothing = values.smoothing;
-    });
 
     const pong = data => {
         const [roll, pitch, yaw, time] = data.split(',');
@@ -93,8 +85,7 @@ function start() {
     function compass(data) {
         const [roll, pitch, yaw] = data.split(',');
         const heading = parseFloat(yaw, 10) + 180;
-        values.set({rawHeading: heading});
-        values.set({heading: utils.fixed(headingSmoother.smooth(heading), 0)});
+        values.set({heading: utils.fixed(heading, 0)});
         values.set({roll: roll});
         values.set({pitch: pitch});
     }

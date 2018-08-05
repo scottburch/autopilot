@@ -4,7 +4,7 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            smoothing: 10,
+            smoothing: 0,
             kP: 0.25,
             kI: 0.01,
             kD: 0.01,
@@ -19,7 +19,7 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            smoothing: 10,
+            smoothing: 0,
             kP: 0.6,
             kI: 0.06,
             kD: 0.02,
@@ -34,7 +34,7 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            smoothing: 10,
+            smoothing: 0,
             kP: 1,
             kI: 0.04,
             kD: 0.02,
