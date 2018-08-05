@@ -24,14 +24,9 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            smoothing: 0,
-            kP: 1,
-            kI: 0.04,
-            kD: 0.02,
-
-            kfR: 1,
-            kfQ: 3,
-            rudderMult: 100
+            kP: 65,
+            kI: 2.6,
+            kD: 1.3,
         }
     },
     'sail-med-heavy-downhill': {
@@ -39,13 +34,9 @@ module.exports = {
         values: {
             rudderTime: 300,
             rudderWait: 1300,
-            rudderMult: 100,
-            smoothing: 10,
-            kP: .6,
-            kI: .06,
-            kD: .02,
-            kfR: 1,
-            kfQ: 1 
+            kP: 39,
+            kI: 3.9,
+            kD: 1.3,
         }
     }
 };

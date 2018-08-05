@@ -1,8 +1,8 @@
-var listeners = {};
-var _ = require('lodash');
-var anyValueListeners = [];
+const listeners = {};
+const _ = require('lodash');
+let anyValueListeners = [];
 
-var values = module.exports = {
+const values = module.exports = {
     set: obj => {
         _.each(obj, (value, prop) => {
             if(values[prop] !== value) {
@@ -21,12 +21,12 @@ var values = module.exports = {
     },
 
     onChangeValue: (prop, cb) => {
-        var callbacks = listeners[prop] || [];
+        const callbacks = listeners[prop] || [];
         listeners[prop] = _.uniq(callbacks.concat(cb));
     },
 
     onChangeAnyValue: cb => {
-        anyValueListeners = _.uniq(anyValueListeners.concat([cb]));
+        anyValueListeners.includes(cb) || anyValueListeners.push(cb);
     },
 
     onChangeValues: (props, cb) => {

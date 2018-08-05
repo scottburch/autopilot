@@ -1,23 +1,21 @@
-var values = require('./values');
-var utils = require('./utils');
-const {data} = require('./data');
+const values = require('./values');
+const utils = require('./utils');
 
-var _ = require('lodash');
+const _ = require('lodash');
 
-var port;
-var SerialPort = require('serialport');
+const SerialPort = require('serialport');
 
 
 values.simulator || start();
 
 function start() {
-	var dev = '/dev/tty.usbserial-A4007c47'
+	const dev = '/dev/tty.usbserial-A4007c47';
 //    var dev = '/dev/cu.usbmodem1421'
 //    var dev = '/dev/ttyACM0';
 //    var dev = '/dev/ttyUSB0';
 
     const parser = new SerialPort.parsers.Readline();
-    port = new SerialPort(dev, {
+    const port = new SerialPort(dev, {
         baudRate: 115200,
     });
 	port.pipe(parser);
@@ -29,9 +27,7 @@ function start() {
         parser.on('data', function (string) {
             string = _.trim(string);
             if (/[A-Z0-9]+\:/.test(string)) {
-                var parts = string.split(':');
-                var prefix = parts[0];
-                var data = parts[1];
+                const [prefix, data] = string.split(':');
                 switch (prefix) {
                     case 'AHRS':
                         compass(data);
@@ -85,9 +81,11 @@ function start() {
     function compass(data) {
         const [roll, pitch, yaw] = data.split(',');
         const heading = parseFloat(yaw, 10) + 180;
-        values.set({heading: utils.fixed(heading, 0)});
-        values.set({roll: roll});
-        values.set({pitch: pitch});
+        values.set({
+            heading: utils.fixed(heading, 0),
+            roll: roll,
+            pitch: pitch
+        });
     }
 
 }

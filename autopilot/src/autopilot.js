@@ -1,6 +1,5 @@
 "use strict";
 const PID = require('node-pid-controller');
-const presets = require('./presets');
 
 const values = require('./values');
 const utils = require('./utils');
@@ -18,7 +17,9 @@ values.onChangeValue('course', () => {
         pidController = undefined;
         values.set({rudder: 0});
     }
-    values.set({error: 0});
+
+    // I think this will cause problems so I am removing
+    //    values.set({error: 0});
 });
 
 const stateIdle = {
@@ -70,9 +71,8 @@ const calcYawSpeed = (function () {
 }());
 
 function calcCourseError() {
-    var error = values.course === undefined ? undefined : utils.fixed(utils.getDirectionalDiff(values.course, values.heading));
     values.set({
-        error: error
+        error: values.course === undefined ? undefined : utils.fixed(utils.getDirectionalDiff(values.course, values.heading))
     });
 }
 

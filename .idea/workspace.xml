@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd8d03cd-cbb1-4c9a-a5ba-63e079c72aed" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autopilot/src/autopilot.js" beforeDir="false" afterPath="$PROJECT_DIR$/autopilot/src/autopilot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autopilot/src/data.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/autopilot/src/presets.js" beforeDir="false" afterPath="$PROJECT_DIR$/autopilot/src/presets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/AdjustableValuesBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/AdjustableValuesBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autopilot/src/serial.js" beforeDir="false" afterPath="$PROJECT_DIR$/autopilot/src/serial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autopilot/src/values.js" beforeDir="false" afterPath="$PROJECT_DIR$/autopilot/src/values.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +19,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="values.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autopilot/src/values.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="55" lean-forward="true" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="serial.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autopilot/src/serial.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="1305">
+              <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/autopilot/src/start.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -42,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="presets.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="presets.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autopilot/src/presets.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="570">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -54,8 +76,8 @@
       <file leaf-file-name="autopilot.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autopilot/src/autopilot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="-1070">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -68,7 +90,6 @@
       <find>smoothing</find>
       <find>voltage</find>
       <find>calcrudder</find>
-      <find>presets</find>
       <find>pitch</find>
       <find>.css</find>
       <find>offchange</find>
@@ -81,18 +102,22 @@
       <find>getall</find>
       <find>onchangeanyvalue</find>
       <find>rawheading</find>
-      <find>smooth</find>
       <find>kalman</find>
       <find>rawerror</find>
       <find>mult</find>
       <find>.last</find>
+      <find>smooth</find>
+      <find>data</find>
+      <find>data'</find>
+      <find>heading</find>
+      <find>presets</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/client</dir>
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/autopilot</dir>
-      <dir>$PROJECT_DIR$/autopilot/src</dir>
       <dir>$PROJECT_DIR$/client/src</dir>
+      <dir>$PROJECT_DIR$/autopilot/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -108,12 +133,12 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/autopilot/src/utils.js" />
         <option value="$PROJECT_DIR$/autopilot/src/Smoother.js" />
-        <option value="$PROJECT_DIR$/autopilot/src/values.js" />
-        <option value="$PROJECT_DIR$/autopilot/src/serial.js" />
         <option value="$PROJECT_DIR$/client/src/ValuesBox.js" />
         <option value="$PROJECT_DIR$/client/src/AdjustableValuesBox.js" />
-        <option value="$PROJECT_DIR$/autopilot/src/autopilot.js" />
         <option value="$PROJECT_DIR$/autopilot/src/presets.js" />
+        <option value="$PROJECT_DIR$/autopilot/src/serial.js" />
+        <option value="$PROJECT_DIR$/autopilot/src/values.js" />
+        <option value="$PROJECT_DIR$/autopilot/src/autopilot.js" />
       </list>
     </option>
   </component>
@@ -591,7 +616,7 @@
       <workItem from="1517118696468" duration="417000" />
       <workItem from="1517239095827" duration="1294000" />
       <workItem from="1520097353736" duration="94000" />
-      <workItem from="1533440097599" duration="1530000" />
+      <workItem from="1533440097599" duration="4494000" />
     </task>
     <task id="LOCAL-00001" summary="fix presets">
       <created>1498951842234</created>
@@ -611,7 +636,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13950000" />
+    <option name="totallyTimeSpent" value="16914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1152" height="695" extended-state="0" />
@@ -896,38 +921,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autopilot/src/values.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autopilot/src/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autopilot/src/start.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autopilot/src/Smoother.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autopilot/src/serial.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
@@ -945,17 +942,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autopilot/src/autopilot.js">
+    <entry file="file://$PROJECT_DIR$/autopilot/src/presets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="570">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autopilot/src/presets.js">
+    <entry file="file://$PROJECT_DIR$/autopilot/src/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="135">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autopilot/src/serial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autopilot/src/autopilot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1070">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autopilot/src/values.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="55" lean-forward="true" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autopilot/src/start.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
         </state>
       </provider>
     </entry>
