@@ -92,7 +92,6 @@ function createPIDController() {
         k_d: values.kD
     });
     pidController.setTarget(0);
-//    pidController.last = 0;
 }
 
 const calcRudder = (function () {
@@ -103,7 +102,7 @@ const calcRudder = (function () {
         function handleError() {
             pidController || createPIDController();
             let result = pidController.update(values.error);
-            let newRudder = utils.fixed((result - last) * values.rudderMult, 0);
+            let newRudder = utils.fixed(result - last, 0);
             values.set({rudder: newRudder < 0 ? Math.max(-1023, newRudder) : Math.min(1023, newRudder)});
             last = result;
         }

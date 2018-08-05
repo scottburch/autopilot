@@ -4,14 +4,9 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            smoothing: 0,
-            kP: 0.25,
-            kI: 0.01,
-            kD: 0.01,
-
-            kfR: 1,
-            kfQ: 3,
-            rudderMult: 65
+            kP: 16.5,
+            kI: 0.6,
+            kD: 0.6,
         }
     },
     'sail-light': {
@@ -19,14 +14,9 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            smoothing: 0,
-            kP: 0.6,
-            kI: 0.06,
-            kD: 0.02,
-
-            kfR: 1,
-            kfQ: 1,
-            rudderMult: 65
+            kP: 39,
+            kI: 3.9,
+            kD: 1.3,
         }
     },
     'sail-light-med-downhill': {

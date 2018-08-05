@@ -14,13 +14,9 @@ const eventToString = require('key-event-to-string')({
 const adjustableValues = [
     {key: 'rudderTime', text: 'RudderTime', inc: 10},
     {key: 'rudderWait', text: 'Rudder Wait', inc: 10},
-    {key: 'rudderMult', text: 'Rudder mult', inc: 0.5},
-    {key: 'smoothing', text: 'Smoothing', inc: 10},
-    {key: 'kP', text: 'P', inc: 0.05},
-    {key: 'kI', text: 'I', inc: 0.01},
-    {key: 'kD', text: 'D', inc: 0.01},
-    {key: 'kfR', text: 'kalman R', inc: 0.1},
-    {key: 'kfQ', text: 'kalman Q', inc: 0.1}
+    {key: 'kP', text: 'P', inc: 0.5},
+    {key: 'kI', text: 'I', inc: 0.1},
+    {key: 'kD', text: 'D', inc: 0.1},
 ];
 
 values.simulator && (adjustableValues.push({key: 'heading', text: 'Heading(sim): ', inc: 0.1}));
