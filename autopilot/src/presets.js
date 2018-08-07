@@ -5,8 +5,8 @@ module.exports = {
             rudderTime: 200,
             rudderWait: 200,
             kP: 16.5,
-            kI: 0.6,
-            kD: 0.6,
+            kI: 0.2,
+            kD: 0.2,
         }
     },
     'sail-light': {

@@ -76,14 +76,7 @@ function calcCourseError() {
     });
 }
 
-values.onChangeValues(['kP', 'kI', 'kD'], () => {
-    let pid = pidController;
-    if (pid) {
-        pid.k_p = values.kP;
-        pid.k_i = values.kI;
-        pid.k_d = values.kD;
-    }
-});
+values.onChangeValues(['kP', 'kI', 'kD'], () => pidController = undefined);
 
 function createPIDController() {
     pidController = new PID({
